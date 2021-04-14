@@ -16,7 +16,7 @@ public class MainController {
     List<String> seznamCitatu = Arrays.asList("A user interface is like a joke. If you have to explain it, it's not that good.",
             "To replace programmers with robots, clients will have to accurately describe what they want. We're safe.",
             "I have a joke on programming but it only works on my computer.",
-            "When I wrote this code, only God & I understood what it did. Now… Only God knows.");
+            "When I wrote this code, only God & I understood what it did. Now… Only God knows."); //seznam mi staci vytvorit jen jednou proto to staci tady ne az v metode
     List<String> seznamFotek = Arrays.asList("SyDmbnO5aV0", "NLkXZQ7kHzI", "JlpLcuMDLCo", "LsqF59OOEC0");
 
     private final Random random; //generátor náh cisel
@@ -27,8 +27,8 @@ public class MainController {
 
     @GetMapping("/")
     public ModelAndView citatObrazek() { //metoda
-        int indexCitat = random.nextInt(4);
-        int indexFoto = random.nextInt(4);
+        int indexCitat = random.nextInt(seznamCitatu.size());
+        int indexFoto = random.nextInt(seznamFotek.size());
         ModelAndView result = new ModelAndView("citat"); //definujeme jakou sablonu ma pouzit
         result.addObject("citatTed", seznamCitatu.get(indexCitat)); //jmeno atributu; hodnota atributu
         result.addObject("fotoTed", "background-image: url(https://source.unsplash.com/"+seznamFotek.get(indexFoto)+"/1600x900)");
