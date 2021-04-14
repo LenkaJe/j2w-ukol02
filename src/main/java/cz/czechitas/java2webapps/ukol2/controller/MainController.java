@@ -31,7 +31,7 @@ public class MainController {
         int indexFoto = random.nextInt(4);
         ModelAndView result = new ModelAndView("citat"); //definujeme jakou sablonu ma pouzit
         result.addObject("citatTed", seznamCitatu.get(indexCitat)); //jmeno atributu; hodnota atributu
-        result.addObject("fotoTed", seznamFotek.get(indexFoto));
+        result.addObject("fotoTed", "background-image: url(https://source.unsplash.com/"+seznamFotek.get(indexFoto)+"/1600x900)");
         return result; //metoda citatObrazek vrací result
     }
 }

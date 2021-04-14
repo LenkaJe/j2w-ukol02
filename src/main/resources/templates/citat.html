@@ -5,15 +5,25 @@
     <title>Citát dne</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+<body th:style= "${fotoTed}">
+<blockquote th:utext="${citatTed}" ></blockquote>
+</body>
+</html>
+
+
+
+    <!--
+    <body th:style="${bodyStyle}">
     <style th:inline="text">
         body {
-            background-image: url(https://source.unsplash.com/[[${fotoTed}]]/1600x900);
+            "${fotoTed}"
         }
     </style>
 </head>
 <body>
-<blockquote th:text="${citatTed}" ><strong>Debugging</strong> /de·bugh·ing/ <em>verb</em><br/>The Classic Mystery Game where you are the detective, the victim, and the murderer.</blockquote>
+<blockquote th:text="${citatTed}" ></blockquote>
 </body>
 </html>
+a -->

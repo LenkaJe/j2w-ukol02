@@ -21,8 +21,8 @@ body {
 }
 
 blockquote {
-    font-size: 64px;
-    text-shadow: 0 0 10px black;
+    font-size: 65px;
+    text-shadow: 0 0 10px #3ce30e;
     line-height: 1.3em;
     padding: 2em;
     background-color: rgba(0, 0, 0, 0.4);
